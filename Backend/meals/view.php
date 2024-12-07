@@ -23,7 +23,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
          </a>  
         </div>
         <div class="col-md-6">
-            <h1><strong>Meal Details</strong></h1><br>
+            <h1><strong>Detail Produk </strong></h1><br>
             <div class="table-responsive">
             <table class="table table-condensed table-responsive table-user-information">
                 <tbody>
@@ -31,7 +31,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
                     <tr>    
                         <td>
                             <strong style="font-size: 20px;">
-                                   Meal                                                
+                                   Produk                                                
                             </strong>
                         </td>
                         <td style="font-size: 20px;" class="text-primary">
@@ -42,7 +42,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
                         <td>
                             <strong style="font-size: 20px;">
                                 <!-- <span class="glyphicon glyphicon-cloud text-primary"></span>   -->
-                                Category                                                
+                                Kategori                                                
                             </strong>
                         </td>
                         <td style="font-size: 20px;" class="text-primary">
@@ -54,7 +54,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
                         <td>
                             <strong style="font-size: 20px;">
                                 <!-- <span class="glyphicon glyphicon-bookmark text-primary"></span>  -->
-                                Price                                                
+                                Harga                                                
                             </strong>
                         </td>
                         <td style="font-size: 20px;" class="text-primary">
@@ -82,7 +82,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
                   <button class="close" data-dismiss="modal" type=
                   "button">×</button>
 
-                  <h4 class="modal-title" id="myModalLabel">Change Image</h4>
+                  <h4 class="modal-title" id="myModalLabel">Ubah Gambar</h4>
                 </div>
 
                 <form action="controller.php?action=photos" enctype="multipart/form-data" method="post">
@@ -108,7 +108,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
 
                   <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">Close</button> <button class="btn btn-primary"
-                    name="savephoto" type="submit">Upload Photo</button>
+                    name="savephoto" type="submit">Unggah Gambar</button>
                   </div>
                 </form>
               </div><!-- /.modal-content -->

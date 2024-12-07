@@ -42,8 +42,8 @@ $tableno = "";
 				  <thead style="font-size: 15px;">
 				  	<tr>  
 						<th>Meals</th>  
-						<th width="100">Categories</th>  
-						<th width="50">Price</th> 
+						<th width="100">Kategori</th>  
+						<th width="50">Harga</th> 
 						<th width="20">Action</th> 
 				  	</tr>	
 				  </thead> 	

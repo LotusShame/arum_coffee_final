@@ -82,7 +82,7 @@ require_once ("../include/initialize.php");
                                        </select>
                 </div> 
                 <div class="col-xs-4">
-                   <button  style="height: 40px;text-align:  center; width: 140px;font-size: 15px"  type="submit" id="submit" name="submit" class="text-center btn btn-primary  btn-sm">Place Order</button> 
+                   <button  style="height: 40px;text-align:  center; width: 140px;font-size: 15px"  type="submit" id="submit" name="submit" class="text-center btn btn-primary  btn-sm">Lanjutkan Pemesanan</button> 
                 </div>
               </div>
              </div> 

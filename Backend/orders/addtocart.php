@@ -96,7 +96,7 @@
                   </select>
                 </div> 
                 <div class="col-xs-2">
-                   <button  style="height: 30px;text-align:  center; font-size: 12px"  type="submit" id="submit" name="submit" class="text-center btn btn-primary  btn-xs">Place Order</button> 
+                   <button  style="height: 30px;text-align:  center; font-size: 12px"  type="submit" id="submit" name="submit" class="text-center btn btn-primary  btn-xs">Lanjutkan Pemesanan</button> 
                 </div>
               </div>
              </div> 

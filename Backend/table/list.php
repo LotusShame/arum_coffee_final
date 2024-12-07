@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Table Numbers  <a href="controller.php?action=add" class="btn btn-primary btn-s  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Table</a>  </h1>
+            <h1 class="page-header">Daftar Nomor Meja  <a href="controller.php?action=add" class="btn btn-primary btn-s  ">  <i class="fa fa-plus-circle fw-fa"></i> Tambahkan Meja</a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -18,9 +18,9 @@
 				  		<!-- <th>No.</th> -->
 				  		<th style="font-size: 15px; text-align: center;" width="10%">
 				  		 <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">  -->
-				  		 Table Number</th>
-				  		 <th style="font-size: 15px;" width="20%">Customer Name</th> 
-				  		 <th style="font-size: 15px;" width="11%">Time</th>
+				  		 Nomor Meja</th>
+				  		 <th style="font-size: 15px;" width="20%">Nama Pelanggan</th> 
+				  		 <th style="font-size: 15px;" width="11%">Waktu</th>
 				  		 <th style="font-size: 15px; text-align: center;" width="10%">Status</th>
 				  		 <th style="font-size: 15px; text-align: center;" width="23%">Action</th>
 				  	</tr>	
@@ -36,7 +36,7 @@
 				  	    if ($result->STATUS=='Reserved') {
 				  			# code...
 
-				  			$btn = "Cancel";
+				  			$btn = "Batalkan";
 				  			$reservebtn = "Cancel";
 				  			$resdisable = "Disabled";
 				  			$titlebtn = "Cancel";
@@ -47,7 +47,7 @@
 				  			
 				  		}elseif ($result->STATUS=='Available') {
 				  			# code...
-				  			$btn = "Reserve";
+				  			$btn = "Reservasi";
 				  			$reservebtn = "Reserve";
 				  			$titlebtn = "Cancel";
 				  			$resdisable = "";
@@ -58,7 +58,7 @@
 				  			 
 				  		}elseif ($result->STATUS=='Occupied') {
 				  			# code...
-				  		    $btn = "Occupied";
+				  		    $btn = "Terisi";
 				  		    $reservebtn = "Reserve";
 				  		    $resdisable = "";
 				  		    $titlebtn = "Cancel";
@@ -75,9 +75,9 @@
 				  			echo  '<td style="font-size:20px;">'.$time.'</td>';
 				  			echo '<td style="font-size:20px; text-align:center;">' . $result->STATUS.'</td>';
  
-				  		echo '<td align="center"><a title="Edit" href="index.php?view=edit&id='.$result->TABLEID.'" class="btn btn-primary btn-s">  <span class="fa fa-pencil fw-fa"> Edit table No.</a>
+				  		echo '<td align="center"><a title="Edit" href="index.php?view=edit&id='.$result->TABLEID.'" class="btn btn-primary btn-s">  <span class="fa fa-pencil fw-fa"> Edit No. Meja</a>
 				  			<a title="'.$reservebtn.'" href="'.$url.'" class="btn btn-success btn-s  click_reserve" '.$disable.'>  <span class="fa fa-bookmark fw-fa"> '.$btn.'</a>
-				  		     <a title="Remove" href="controller.php?action=delete&id='.$result->TABLEID.'" class="btn btn-danger btn-s  "'.$disable.''.$resdisable.'>  <span class="fa  fa-trash-o fw-fa " > Remove</a></td>';
+				  		     <a title="Remove" href="controller.php?action=delete&id='.$result->TABLEID.'" class="btn btn-danger btn-s  "'.$disable.''.$resdisable.'>  <span class="fa  fa-trash-o fw-fa " > Hapus</a></td>';
 				  		// echo '<td></td>';
 				  		     // Reserve Button
 				  		//echo '<a title="'.$reservebtn.'" href="'.$url.'" class="btn btn-success btn-s  click_reserve" '.$disable.'>  <span class="fa fa-bookmark fw-fa"> '.$btn.'</a>';

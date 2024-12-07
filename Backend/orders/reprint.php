@@ -84,8 +84,8 @@ date_default_timezone_set('Asia/Makassar');
                 echo $viewTitle->Title;
     ?>
         </title></div>
-        <div style="text-align: center;font-size: 8px;">Located at Center Plaza, Rizal Street</div>
-        <div style="text-align: center;font-size: 8px;">Kabankalan City, Negros Occidental</div>
+        <div style="text-align: center;font-size: 8px;">Located at Balikpapan</div>
+        <div style="text-align: center;font-size: 8px;">Kalimantan Timur, Indonesia</div>
         <table>
             <tr>
                 <td colspan="3" style="padding-top: 5px;padding-bottom: 5px; font-size: 8px;">TIN No.: 000-123-456-789</td>
@@ -94,7 +94,7 @@ date_default_timezone_set('Asia/Makassar');
 <!--         <div style="text-align: center;font-size: 8px; margin-bottom: 10px;"><?php echo $remarks; ?></div> -->  
     <table  class="tables">
         <tr style="border-bottom: .5px solid; font-size: 8px;margin-bottom: 5px;">
-            <td colspan="3" align="center" style="padding-bottom: 3px;">Table No: <?php echo $tableno; ?> | Order No.: <?php echo $orderno?></td>
+            <td colspan="3" align="center" style="padding-bottom: 3px;">No. Meja: <?php echo $tableno; ?> | No. Pesanan: <?php echo $orderno?></td>
         </tr>
         <tr style="margin-bottom:5px;margin-top:5px;">
         <?php 
@@ -160,32 +160,32 @@ date_default_timezone_set('Asia/Makassar');
                             ?> 
                         <!-- summary -->  
                         <tr>
-                            <td colspan="2" style="padding-top: 5px;padding-bottom: 2px;">Gross Charge: </td>
+                            <td colspan="2" style="padding-top: 5px;padding-bottom: 2px;">Biaya Awal: </td>
                              <td  align="right" style="border-bottom: .5px solid;" ><?php echo number_format($res->TOTALPAYMENT,2); ?></td>
                         </tr>
                          <tr> 
-                            <td style="padding-top: 5px;padding-bottom: 5px;" colspan="2">Senior Discount: </td>
+                            <td style="padding-top: 5px;padding-bottom: 5px;" colspan="2">Diskon: </td>
                             <td  align="right"><?php echo number_format($senior,2); ?></td>
                         </tr> 
                         <tr>
-                            <td>SeniorID:</td><td><?php echo ($res->SENIORID!="")? $res->SENIORID : "None";?></td>
+                            <td>ID Member:</td><td><?php echo ($res->SENIORID!="")? $res->SENIORID : "None";?></td>
                         </tr>
                          <tr> 
-                            <td style="padding-top: 5px;padding-bottom: 5px;" colspan="2">Total Bill: </td>
+                            <td style="padding-top: 5px;padding-bottom: 5px;" colspan="2">Total Tagihan: </td>
                             <td  align="right"><?php echo number_format($res->OVERALLTOTAL,2); ?></td>
                         </tr>
                         <tr>
                             <td></td>
                         </tr> 
                          <tr style="padding: 5px;"> 
-                            <td colspan="2">Vatable: </td>
+                            <td colspan="2">PPN: </td>
                             <td  colspan="2" ><?php echo number_format($vatable,2); ?></td>
                         </tr>
                         <tr>
                             <td></td>
                         </tr> 
                          <tr style="margin-bottom: 10px; padding: 5px;"> 
-                            <td colspan="2">Vat 12%: </td>
+                            <td colspan="2">PPN 12%: </td>
                             <td   style="border-bottom:.5px solid;" ><?php echo number_format($vat,2); ?></td>
                             <td>&nbsp;</td>
                         </tr>
@@ -193,21 +193,21 @@ date_default_timezone_set('Asia/Makassar');
                             <td></td>
                         </tr> 
                         <tr> 
-                            <td style="padding-bottom: 2px;padding-top: 2px;" colspan="2">Reg. Bill: </td>
+                            <td style="padding-bottom: 2px;padding-top: 2px;" colspan="2">Reg. Tagihan: </td>
                             <td  colspan="2" ><?php echo number_format($regbill,2); ?></td>
                         </tr>
                         <tr>
                             <td></td>
                         </tr> 
                         <tr> 
-                            <td colspan="2" style="padding-top: 5px;padding-bottom: 5px;">Tender Amount: </td>
+                            <td colspan="2" style="padding-top: 5px;padding-bottom: 5px;">Jumlah Uang: </td>
                             <td  align="right"><?php echo number_format($res->TENDEREDAMOUNT,2); ?></td>
                         </tr>
                         <tr>
                             <td></td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="padding-top: 2px;padding-bottom: 5px;">Change: </td>
+                            <td colspan="2" style="padding-top: 2px;padding-bottom: 5px;">Kembalian: </td>
                             <td  align="right"><?php echo number_format($res->PCHANGE,2); ?></td>
                         </tr>
                         <tr>
@@ -236,7 +236,7 @@ date_default_timezone_set('Asia/Makassar');
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="3" style="text-align: center; font-size: 8px; ">www.facebook.com/meloisplazacafe</td>
+                                <td colspan="3" style="text-align: center; font-size: 8px; ">www.facebook.com/arum_coffee</td>
                             </tr>
                         <tr>
                             <td style="padding-top: 5px;" colspan="3" align="center">
@@ -247,8 +247,8 @@ date_default_timezone_set('Asia/Makassar');
                             <td colspan="3" style="padding-top: 5px; padding-bottom: 5px; text-align: center;margin-bottom: 5px;">Thank You for Coming...</td>
                         </tr>
                         <tr style="border-bottom: .5px solid;">
-                            <td style="margin-top: 5px; font-size: 8px;">Date: <?php echo date('M-d-Y'); ?></td>
-                            <td style="padding-bottom: 4px;" colspan="3" style="font-size: 8px;">Time: <?php echo date('h:i A'); ?></td>
+                            <td style="margin-top: 5px; font-size: 8px;">Tanggal: <?php echo date('M-d-Y'); ?></td>
+                            <td style="padding-bottom: 4px;" colspan="3" style="font-size: 8px;">Waktu: <?php echo date('h:i A'); ?></td>
                         </tr>
     </table>
     </div>

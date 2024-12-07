@@ -212,26 +212,26 @@ fieldset[disabled] .navbar-pos .btn-link:focus {
 
 <?php if ($_SESSION['ADMIN_ROLE']=='Cashier' || $_SESSION['ADMIN_ROLE']=='Administrator') { ?> 
                     <<li class="<?php echo (isset($_GET['view']) && ($_GET['view'] == 'POS' || $_GET['view'] == 'addmeal')) ? "active" : ""; ?>">
-                       <a href="<?php echo web_root; ?>orders/index.php?view=POS"><i class="fa fa-fw fa-th-list"></i> Orders <div id="notif" class="label label-danger"><?php echo $maxrow; ?></div></a>
+                       <a href="<?php echo web_root; ?>orders/index.php?view=POS"><i class="fa fa-fw fa-th-list"></i> Pesanan <div id="notif" class="label label-danger"><?php echo $maxrow; ?></div></a>
                     </li>
  
 <?php } ?>
 <?php if ($_SESSION['ADMIN_ROLE']=='Administrator'  || $_SESSION['ADMIN_ROLE']=='Cashier') { ?> 
                     <li class="<?php echo (currentpage() == 'table') ? "active" : false;?>">
-                        <a href="<?php echo web_root; ?>table/"><i class="fa fa-fw fa-table"></i> Tables</a>
+                        <a href="<?php echo web_root; ?>table/"><i class="fa fa-fw fa-table"></i> Meja</a>
                     </li>
 <?php } ?>
 <?php if ($_SESSION['ADMIN_ROLE']=='Administrator'  || $_SESSION['ADMIN_ROLE']=='Cashier') { ?> 
                     <li class="<?php echo (currentpage() == 'meals') ? "active" : false;?>">
-                        <a href="<?php echo web_root; ?>meals/"><i class="fa fa-cutlery"></i> Meals</a>
+                        <a href="<?php echo web_root; ?>meals/"><i class="fa fa-cutlery"></i>Produk</a>
                     </li>
                     <li class="<?php echo (currentpage() == 'category') ? "active" : false;?>">
-                        <a href="<?php echo web_root; ?>category/"><i class="fa fa-align-left"></i> Categories</a>
+                        <a href="<?php echo web_root; ?>category/"><i class="fa fa-align-left"></i>Kategori</a>
                     </li>
 <?php } ?>                  
 <?php if ($_SESSION['ADMIN_ROLE']=='Administrator' || $_SESSION['ADMIN_ROLE']=='Admin') {?> 
                     <li class="<?php echo (currentpage() == 'user') ? "active" : false;?>">
-                        <a href="<?php echo web_root; ?>user/"><i class="fa fa-users"></i> Manage Users</a>
+                        <a href="<?php echo web_root; ?>user/"><i class="fa fa-users"></i>Kelola User</a>
                     </li>
 <?php } ?>
 
@@ -328,7 +328,7 @@ $("#expandable").on("click", function(){
            $("#cart").html(data);
            $("#addnotif").hide();
            $("#addnotif").show()
-           $("#addnotif").html("Meal added to Cart"); 
+           $("#addnotif").html("Produk telah Masuk Keranjang"); 
            setInterval(function(){
            $("#addnotif").hide();  
         },3000)

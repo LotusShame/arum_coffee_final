@@ -46,7 +46,7 @@ switch ($action) {
 						$autonum = New Autonumber(); 
 						$autonum->auto_update('userid');
 
-			message("The account [". $_POST['U_NAME'] ."] created successfully!", "success");
+			message("Akun [". $_POST['U_NAME'] ."] Berhasil Ditambahkan!", "success");
 			redirect("index.php");
 			
 		}

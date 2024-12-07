@@ -46,15 +46,15 @@ input[type="checkbox"]{
     	<div class="col-lg-12">
     		<div class="row">
     			<div class="page-header">
-    				List of Orders <a href="addorder.php" class="btn-primary btn btn-s" data-toggle="lightbox" data-title="New Order"><i class="fa fa-plus-circle"></i> New Order</a>
+    				Daftar Pesanan <a href="addorder.php" class="btn-primary btn btn-s" data-toggle="lightbox" data-title="New Order"><i class="fa fa-plus-circle"></i> Pesanan Baru</a>
     			</div> 
                     <div id="reload" class="scrollorder">
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr> 
-                                    <th>Order No.</th> 
-                                    <th>Table No.</th>
-                                    <th>Caterer</th>
+                                    <th>No. Pesanan</th> 
+                                    <th>No. Meja</th>
+                                    <th>Role</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -90,10 +90,10 @@ input[type="checkbox"]{
     	<!-- order details -->
     		<div class="row">
     			<div   style="font-size: 24px;font-weight: bold;margin-top: 10px;">
-    				Order Details 
-    				<small><?php echo isset($_GET['tableno']) ? " for Table Number: ". $_GET['tableno'] : "" ?> <?php echo isset($_GET['rem']) ? "| ". $_GET['rem'] : "" ?></small>
-                    <span><?php echo isset($_GET['orderno']) ?  '<a href="addmeal.php?view=addmeal&orderno='.$_GET['orderno'].'&tableno='.$_GET['tableno'].'&rem='.$remarks.'" data-toggle="lightbox" class="btn btn-s btn-primary " data-title="<b>Add Meal</b>"><i class="fa fa-plus-circle"> Add Meal</i></a>' : ''; ?></span>
-    				<p style="text-align: right;font-size: 20px;">Order Number:<b style="text-decoration: underline;"> <?php echo isset($_GET['orderno']) ?  $_GET['orderno'] : "NONE" ?></b>
+    				Detail Pesanan 
+    				<small><?php echo isset($_GET['tableno']) ? " untuk Meja no: ". $_GET['tableno'] : "" ?> <?php echo isset($_GET['rem']) ? "| ". $_GET['rem'] : "" ?></small>
+                    <span><?php echo isset($_GET['orderno']) ?  '<a href="addmeal.php?view=addmeal&orderno='.$_GET['orderno'].'&tableno='.$_GET['tableno'].'&rem='.$remarks.'" data-toggle="lightbox" class="btn btn-s btn-primary " data-title="<b>Add Meal</b>"><i class="fa fa-plus-circle"> Tambahkan Produk</i></a>' : ''; ?></span>
+    				<p style="text-align: right;font-size: 20px;">Nomor Orderan:<b style="text-decoration: underline;"> <?php echo isset($_GET['orderno']) ?  $_GET['orderno'] : "NONE" ?></b>
     					<input type="hidden" name="ORDERNO" id="ORDERNO"   value="<?php echo isset($_GET['orderno']) ?  $_GET['orderno'] : "NONE" ?>">
                         <input type="hidden" name="tableno" id="tableno"   value="<?php echo isset($_GET['tableno']) ?  $_GET['tableno'] : "NONE" ?>">
                          <input type="hidden" name="REMARKS" id="REMARKS"   value="<?php echo isset($_GET['rem']) ?  $_GET['rem'] : "" ?>">
@@ -104,10 +104,10 @@ input[type="checkbox"]{
     			<table id="table" class="table table-hover" style="font-size: 12px" >
     				<thead>
     					<tr style="font-size: 15px;"> 
-    					    <th>Meal</th>
-							<th width="60">Price</th>
+    					    <th>Produk</th>
+							<th width="60">Harga</th>
 							<th width="50" style="text-align: center;">Qty</th>
-							<th width="90">Amount</th>
+							<th width="90">Jumlah</th>
 							<th width="30">Action</th>
     					</tr> 
     				</thead>
@@ -150,7 +150,7 @@ input[type="checkbox"]{
     		<!-- end order details -->
     		<!-- summary --> 
     			<div style="font-size: 19px;font-weight: bold;margin-top:20px;margin-bottom: 3px">
-    				Summary
+    				Informasi Pembayaran
     			</div>
                 
     			<table class="table table-bordered">
@@ -163,11 +163,11 @@ input[type="checkbox"]{
                         <tr>
                             <tr>
                                 <td>
-                                    <b style="font-size: 13px;">Discount Person(s)</b> <input type="checkbox" id="SENIORCITIZEN" name="SENIORCITIZEN" class="seniorcitizen" value="20">
+                                    <b style="font-size: 13px;">Diskon</b> <input type="checkbox" id="SENIORCITIZEN" name="SENIORCITIZEN" class="seniorcitizen" value="20">
                                 </td>
                                 <td>
-                                    <input class="form-control" placeholder="How many persons?" type="number" id="SENIORADDNO" name="SENIORADDNO" style="width: 200px;" disabled="true">
-                                     <input class="form-control" placeholder="Senior Id" type="text" id="SENIORID" name="SENIORID" style="width: 200px;margin-top: 5px" disabled="true">
+                                    <input class="form-control" placeholder="Berapa orang?" type="number" id="SENIORADDNO" name="SENIORADDNO" style="width: 200px;" disabled="true">
+                                     <input class="form-control" placeholder="No. Member" type="text" id="SENIORID" name="SENIORID" style="width: 200px;margin-top: 5px" disabled="true">
                                 </td>
                             </tr>
                         </tr>
@@ -177,11 +177,11 @@ input[type="checkbox"]{
                             <input type="hidden" name="overalltotal" id="overalltotal"   value="<?php echo number_format($total,0,'.',''); ?>"></th>
                         </tr>
     					<tr>
-    						<th width="250">Tender Amount</th>
+    						<th width="250">Jumlah Uang</th>
     						<th><input type="text" class="form-control"  name="tenderamount" id="tenderamount"  placeholder="Rp. 0.00" autocomplete="off"> <span id="errortrap"></span></th>
     					</tr>
     					<tr>
-    						<th width="250">Change</th>
+    						<th width="250">Kembalian</th>
     						<th><input class="form-control" type="" class="sukli" readonly="true" name="sukli" id="sukli" value="" placeholder="Rp. 0.00"></th>
     					</tr>
     				</thead>

@@ -51,7 +51,7 @@ switch ($action) {
 			$table->TABLENO	= $tableno;
 			$table->create();
 
-			message("New table number created successfully!", "success");
+			message("Nomor Meja Baru Berhasil Ditambahkan!", "success");
 			redirect("index.php");
 			
 		// }

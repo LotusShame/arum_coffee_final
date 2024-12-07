@@ -15,7 +15,7 @@
 
            <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Add New User</h1>
+            <h1 class="page-header">Tambahkan User Baru</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div> 
@@ -37,7 +37,7 @@
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-lg" id="U_NAME" name="U_NAME" placeholder=
-                            "User Fullname" type="text" value="">
+                            "Nama Lengkap" type="text" value="">
                       </div>
                     </div>
                   </div>
@@ -50,7 +50,7 @@
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-lg" id="U_USERNAME" name="U_USERNAME" placeholder=
-                            "Account Username" type="text" value="">
+                            "Username Akun" type="text" value="">
                       </div>
                     </div>
                   </div>
@@ -62,7 +62,7 @@
 
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" minlength="2" value="">
-                         <input class="form-control input-lg" id="U_PASS" min="3" name="U_PASS" placeholder="Account Password" type="Password" value="" required>
+                         <input class="form-control input-lg" id="U_PASS" min="3" name="U_PASS" placeholder="Password Akun" type="Password" value="" required>
                       </div>
                     </div>
                   </div>
@@ -89,7 +89,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                       <button style="width: 100%;" class="btn btn-primary btn-lg" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button> 
+                       <button style="width: 100%;" class="btn btn-primary btn-lg" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Simpan</button> 
                           <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span></span>&nbsp;<strong>List of Users</strong></a> -->
                        </div>
                     </div>

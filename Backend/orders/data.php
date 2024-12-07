@@ -6,9 +6,9 @@ if(isset($_POST['orderlist'])){
 <table class="table table-bordered table-hover">
     <thead>
         <tr> 
-            <th>Order No.</th> 
-            <th>Table No.</th>
-            <th>Caterer</th>
+            <th>No. Pesanan</th> 
+            <th>No. Meja</th>
+            <th>Role</th>
             <th>Status</th>
         </tr>
     </thead>

@@ -5,8 +5,8 @@ require_once("../include/initialize.php");
            <thead>
             <tr>   
               <th>Meals</th>  
-              <th width="100">Categories</th>  
-              <th width="80">Price</th> 
+              <th width="100">Kategori</th>  
+              <th width="80">Harga</th> 
               <th width="20">Action</th> 
             </tr> 
           </thead>  

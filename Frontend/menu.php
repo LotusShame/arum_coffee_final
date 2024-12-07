@@ -1,10 +1,12 @@
+<?php 
+require_once("../Backend/include/initialize.php");  // Pastikan ini mengarah ke file yang benar di server
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Arum Coffee</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Menu</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
@@ -26,10 +28,11 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <link rel="stylesheet" href="css/style.css"> <!-- Pastikan untuk menyesuaikan dengan path CSS yang Anda gunakan -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Arum<small>Coffee</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +41,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
-	          <li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
+	          <li class="nav-item active"><a href="menu.php" class="nav-link">Menu</a></li>
 	          <li class="nav-item"><a href="services.html" class="nav-link">Pelayanan</a></li>
 	          <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 	          <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
@@ -52,7 +55,7 @@
                 <a class="dropdown-item" href="checkout.html">Checkout</a>
               </div>
             	</li> -->
-	          <li class="nav-item active"><a href="contact.html" class="nav-link">Kontak</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Kontak</a></li>
 	          <!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
 	        </ul>
 	      </div>
@@ -68,8 +71,8 @@
           <div class="row slider-text justify-content-center align-items-center">
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Hubungi Kami</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Beranda</a></span> <span>Kontak</span></p>
+            	<h1 class="mb-3 mt-5 bread">Menu Kami</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Beranda</a></span> <span>Menu</span></p>
             </div>
 
           </div>
@@ -77,39 +80,88 @@
       </div>
     </section>
 
-    <section class="ftco-section contact-section">
-      <div class="container mt-5">
-        <div class="row block-9">
-					<div class="col-md-4 contact-info ftco-animate">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-	              <h2 class="h4">Informasi Kontak</h2>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Alamat :</span> Jl. Ahmad Yani No.13, Balikpapan Kota, Balikpapan, Kalimantan Timur, Indonesia</p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Telepon :</span> <a href="tel://1234567920">+62 8123 456 789</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Email :</span> <a href="mailto:info@yoursite.com">info@arumcoffee.com</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Website :</span> <a href="#">arumcoffee.my.id</a></p>
-	            </div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-          <div class="col-md-6 ftco-animate">
-            
-          </div>
-        </div>
-      </div>
+    <section class="ftco-intro">
+    	<div class="container-wrap">
+    		<div class="wrap d-md-flex align-items-xl-end">
+	    		<div class="info">
+	    			<div class="row no-gutters">
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-phone"></span></div>
+	    					<div class="text">
+	    						<h3>+62 8123 456 789</h3>
+	    						<p>Kami hanya menggunakan kopi spesial pilihan, disangrai dengan sempurna untuk menciptakan rasa yang tak terlupakan.
+								</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-my_location"></span></div>
+	    					<div class="text">
+	    						<h3>Jl. Ahmad Yani No.13</h3>
+	    						<p>Balikpapan Kota, Balikpapan, Kalimantan Timur, Indonesia</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-clock-o"></span></div>
+	    					<div class="text">
+	    						<h3>Buka Senin - Jumat</h3>
+	    						<p>8:00 WITA - 21:00 WITA</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
     </section>
 
-    <!-- <div id="map"></div> -->
+	</br></br></br>
+	<div class="container">
+	<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Daftar Menu</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
 
-    <footer class="ftco-footer ftco-section img">
+<!-- Formulir untuk delete -->
+<form action="controller.php?action=delete" method="POST">
+    <div class="table-responsive">
+        <table id="dash-table" class="table table-striped table-bordered table-hover" style="font-size:12px" cellspacing="0"  >
+            <thead style="font-size: 18px;">
+                <tr>
+                    <th style="text-align: center;">Gambar</th>
+                    <th>Nama Produk</th>
+                    <th>Kategori</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Koneksi dan query ke database
+                $query = "SELECT * FROM `tblmeals` m , `tblcategory` c WHERE m.`CATEGORYID` = c.`CATEGORYID` ORDER BY c.`CATEGORY`";
+                $mydb->setQuery($query);
+                $cur = $mydb->loadResultList();
+
+                // Loop untuk menampilkan data
+                foreach ($cur as $result) { 
+                    echo '<tr>';
+                    echo '<td width="100px">
+                            <a class="MEALID" href="#" data-target="#menuModal" data-toggle="modal" data-id="' . $result->MEALID . '">
+                            <img title="Change Photo" width="100px" height="40px" src="' . web_root . 'meals/' . $result->MEALPHOTO . '">
+                            </a>
+                          </td>';
+                    echo '<td style="font-size:18px;">' . $result->MEALS . '</td>';
+                    echo '<td style="font-size:18px; width:100px">' . $result->CATEGORY . '</td>';
+                    echo '<td style="font-size:18px;" width="100px">Rp. ' . number_format($result->PRICE, 0, '.', '') . '</td>';
+                    echo '</tr>';
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</form>
+</div>
+</br></br></br>
+<footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
@@ -206,6 +258,5 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
-  </body>
+</body>
 </html>

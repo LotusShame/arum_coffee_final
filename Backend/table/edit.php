@@ -11,7 +11,7 @@
 ?> 
  <form class="form-horizontal span6" action="controller.php?action=edit" method="POST">
         <fieldset>
-            <h1 class="page-header">Update Table Number</h1>
+            <h1 class="page-header">Update Nomor Meja</h1>
                       
 
                   <div class="form-group">

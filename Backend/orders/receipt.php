@@ -70,12 +70,12 @@
         <div style="text-align: center;font-size: 13px; margin-bottom: 10px;"><?php echo $remarks; ?></div>
         <table class="tables" style="border: 0; width: 550px;">
             <tr>
-                <td>Order No.: <?php echo $orderno; ?></td>
-                <td>Printed Date: <?php echo $printeddate; ?></td>
+                <td>No. Pesanan: <?php echo $orderno; ?></td>
+                <td>Tanggal dicetak: <?php echo $printeddate; ?></td>
             </tr>
             <tr>
-                <td>Customer No.: <?php echo $customer; ?></td>
-                <td>Table No.: <?php echo $tableno; ?></td>
+                <td>No. Pelanggan: <?php echo $customer; ?></td>
+                <td>No. Meja: <?php echo $tableno; ?></td>
             </tr>
             <tr>
                 <td>Cashier: <?php echo $username; ?></td>
@@ -84,8 +84,8 @@
        <table id="table" class="table" style="font-size: 6px; border:0; padding: 0; width: 550px;" >
                     <thead>
                         <tr> 
-                            <th>Meal</th>
-                            <th width="60">Price</th>
+                            <th>Produk</th>
+                            <th width="60">Harga</th>
                             <th width="50">Qty</th>
                             <th width="100">Sub-total</th> 
                         </tr> 
@@ -127,7 +127,7 @@
                             $res     = $summary->single_summary($orderno);?> 
                         <!-- summary -->  
                          <tr> 
-                            <th colspan="3" style="text-align:right;">Vat 12%</th>
+                            <th colspan="3" style="text-align:right;">PPN 12%</th>
                             <th  width="100"><?php echo number_format($vat,2); ?></th>
                         </tr>
                
@@ -136,12 +136,12 @@
                             <th  width="100"><?php echo number_format($total,2); ?></th>
                         </tr>
                         <tr> 
-                            <th colspan="3" style="text-align:right;">Tender Amount</th>
+                            <th colspan="3" style="text-align:right;">Jumlah Uang</th>
                             <th  width="100"><?php echo number_format($res->TENDEREDAMOUNT,2); ?></th>
                         </tr>
                         <tr>
                             <th>Thank You for Coming... |</th>
-                            <th colspan="2" style="text-align:right;">Changed</th>
+                            <th colspan="2" style="text-align:right;">Kembalian</th>
                             <th  width="100"><?php echo number_format($res->PCHANGE,2); ?></th>
                         </tr>
                        

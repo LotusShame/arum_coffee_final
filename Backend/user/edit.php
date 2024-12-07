@@ -15,7 +15,7 @@
  <form class="form-horizontal span6" action="controller.php?action=edit" method="POST">
 
           <fieldset>
-            <h1 class="page-header"> Update User Account</h1>
+            <h1 class="page-header"> Update Akun User</h1>
                    
                     <!-- <div class="form-group">
                     <div class="col-md-8">
@@ -32,12 +32,12 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label style="font-size: 20px;" class="col-md-4 control-label" for=
-                      "U_NAME">Name:</label>
+                      "U_NAME">Nama:</label>
 
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-lg" id="U_NAME" name="U_NAME" placeholder=
-                            "Account Name" type="text" value="<?php echo $singleuser->FULLNAME; ?>" required>
+                            "Nama Akun" type="text" value="<?php echo $singleuser->FULLNAME; ?>" required>
                       </div>
                     </div>
                   </div>
@@ -63,7 +63,7 @@
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-lg" id="U_PASS" name="U_PASS" placeholder=
-                            "Account Password" type="Password" value="" required>
+                            "Password Akun" type="Password" value="" required>
                       </div>
                     </div>
                   </div>
@@ -90,7 +90,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                         <button style="width: 100%;" class="btn btn-primary btn-lg" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button>
+                         <button style="width: 100%;" class="btn btn-primary btn-lg" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Simpan</button>
                           <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span>&nbsp;<strong>List of Users</strong></a> -->
                       </div>
                     </div>
